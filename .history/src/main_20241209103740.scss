@@ -1,0 +1,510 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "./scss/utilities";
+@import "./scss/variables";
+
+/* Start SweetAlert */
+
+.swal2-popup {
+  background-color: $bg-white;
+}
+.swal2-confirm {
+  background-color: $h1-color;
+}
+.swal2-html-container {
+  color: $h2-color;
+}
+.swal2-icon {
+  color: $h1-color;
+  background-color: $h1-color;
+  .swal2-icon-content {
+    color: $bg-white;
+  }
+}
+
+/* End SweetAlert  */
+
+/* Start Navbar */
+.navbar {
+  .navbar-progress {
+    position: fixed;
+    height: 66px;
+    width: 0;
+    background-color: #3e7279;
+    z-index: -1;
+    transition: 0.1s;
+  }
+  background-color: $h1-color;
+  opacity: 0.7;
+  .container {
+    @include media-breakpoint-down(lg) {
+      flex-direction: row-reverse;
+      .navbar-brand {
+        --translate-y: 0;
+      }
+    }
+
+    @-webkit-keyframes logo-up-down {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(var(--translate-y));
+      }
+    }
+
+    @keyframes logo-up-down {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(var(--translate-y));
+      }
+    }
+    .navbar-brand {
+      @include media-breakpoint-down(lg) {
+        margin: auto;
+      }
+    }
+    a img {
+      background-color: transparent;
+    }
+    .navbar-toggler {
+      border-color: $bg-white;
+      transition: 0.5s;
+      &:hover {
+        border-color: $h2-color;
+        svg {
+          color: $h2-color;
+        }
+      }
+      &:focus {
+        box-shadow: none;
+      }
+
+      svg {
+        color: $bg-white;
+        transition: 0.5s;
+      }
+    }
+    .navbar-nav {
+      li a {
+        color: $bg-white;
+        transition: 0.5s;
+        border-radius: 0.25rem;
+        &.active,
+        &:focus,
+        &:hover {
+          color: $h2-color;
+        }
+      }
+    }
+  }
+}
+/* End Navbar */
+
+/* Start Up Button */
+.up-button {
+  position: fixed;
+  bottom: -2rem;
+  right: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: $h1-color;
+  color: $bg-white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 100;
+  transition: 0.5s;
+  svg {
+    color: $bg-white;
+    -webkit-animation: up-down 2s infinite alternate;
+    animation: up-down 2s infinite alternate;
+  }
+  @-webkit-keyframes up-down {
+    to {
+      transform: translateY(-5px);
+    }
+  }
+  @keyframes up-down {
+    to {
+      transform: translateY(-5px);
+    }
+  }
+}
+/* End Up Button */
+
+/* Start Special Heading */
+.special-heading {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: $h2-color;
+  border: 2px solid $h1-color;
+  position: relative;
+  z-index: 1;
+  &:hover {
+    color: $bg-white;
+    transition-delay: 0.5s;
+    border: 2px solid $bg-white;
+  }
+  &::before,
+  &::after {
+    content: "";
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background-color: $h1-color;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    z-index: -1;
+    transition: 0.5s;
+  }
+  &::before {
+    left: -2rem;
+  }
+  &::after {
+    right: -2rem;
+  }
+  &:hover::before {
+    left: 0;
+    border-radius: 0;
+    width: 51%;
+    height: 101%;
+  }
+  &:hover::after {
+    right: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 101%;
+  }
+}
+/* End Special Heading */
+
+/* Start Quote Generator */
+.quote-generator {
+  background-color: $bg-grey;
+  min-height: 100vh;
+  .container {
+    .quote-id {
+      transform: translateY(40px);
+      z-index: 2;
+      background-color: $h2-color;
+      padding: 0.375rem 0.75rem;
+    }
+    .quote-display {
+      background: $bg-white;
+      min-width: 400px;
+      height: 350px;
+      position: relative;
+      color: $h2-color;
+      &:before {
+        content: "\f10d";
+        bottom: 5rem;
+        left: 2rem;
+      }
+      &:after {
+        content: "\f10e";
+        top: 5rem;
+        right: 2rem;
+      }
+      &::before,
+      &::after {
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+      }
+      .quote-speaker {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+    }
+  }
+}
+/* End Quote Generator */
+
+/* Start currency Converter */
+.currency-converter {
+  background: $bg-white;
+  min-height: 100vh;
+  .container {
+    .currency-display {
+      background: $bg-grey;
+      height: 350px;
+      .amount,
+      select,
+      .currency-result {
+        background-color: $bg-white;
+      }
+      .currency-result {
+        color: $h2-color;
+      }
+      .from,
+      .to {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+      }
+      .currency-result {
+        min-height: 2rem;
+        background-color: $bg-white;
+      }
+      button {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        align-self: center;
+      }
+    }
+  }
+}
+/* End currency Converter */
+
+/* Start News */
+.news {
+  background-color: $bg-grey;
+  min-height: 100vh;
+  .container {
+    .news-list {
+      .card {
+        box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.022);
+        transition: 0.5s;
+        opacity: 0.85;
+        &:hover {
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+          opacity: 1;
+        }
+        img {
+          max-height: 153px;
+        }
+        .card-body {
+          p {
+            max-height: 96px;
+            white-space: wrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+        }
+      }
+      .publish-date {
+        color: #777;
+      }
+    }
+  }
+}
+/* End News */
+
+/* Start Event Manager */
+.event-manager {
+  background-color: $bg-white;
+  min-height: 100vh;
+  .container {
+    .event-display {
+      background-color: $bg-grey;
+      height: 350px;
+      align-self: center;
+      input {
+        background-color: $bg-white;
+      }
+      .add-btn {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        align-self: center;
+      }
+    }
+    .events-list {
+      .event-box {
+        color: $bg-white;
+        background-color: $h1-color;
+        box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.022);
+        transition: 0.5s;
+        opacity: 0.85;
+        &:hover {
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+          opacity: 1;
+        }
+        button {
+          width: -webkit-fit-content;
+          width: -moz-fit-content;
+          width: fit-content;
+          align-self: center;
+        }
+        h3 {
+          color: $bg-white;
+        }
+        p {
+          color: $bg-grey;
+          margin: 0;
+          padding: 0.5rem 0;
+          span {
+            color: $bg-white;
+          }
+        }
+
+        h3,
+        p:not(:last-of-type) {
+          border-bottom: 1px solid $bg-grey;
+        }
+      }
+    }
+  }
+}
+/* End Event Manager */
+
+/* Start Bookmark Manager */
+.bookmark-manager {
+  background-color: $bg-grey;
+  min-height: 100vh;
+  .container {
+    .bookmark-display {
+      background-color: $bg-white;
+      min-height: 350px;
+      align-self: center;
+      input {
+        background-color: $bg-grey;
+      }
+      .choose-category {
+        background-color: $bg-grey;
+        color: $pl-holder;
+        min-height: 54px;
+        .chosen-category-name {
+          background-color: $h1-color;
+          color: $bg-white;
+          transition: 0.5s;
+          &:hover {
+            background-color: $h2-color;
+          }
+        }
+      }
+      .add-btn {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        align-self: center;
+      }
+    }
+    .show-bookmark {
+      background-color: $bg-white;
+      min-height: -webkit-fit-content;
+      min-height: -moz-fit-content;
+      min-height: fit-content;
+      align-self: center;
+      .filter-category {
+        background-color: $bg-grey;
+        .all-chosen-category-tab {
+          background-color: $h1-color;
+          color: $bg-white;
+          margin-bottom: 0.375rem;
+          transition: 0.5s;
+          &:hover {
+            background-color: $h2-color;
+          }
+        }
+        .category-tabs {
+          background-color: $bg-white;
+          min-height: 54px;
+          color: $pl-holder;
+          .chosen-category-tab {
+            display: none;
+            background-color: $h1-color;
+            color: $bg-white;
+            transition: 0.5s;
+            &:hover {
+              background-color: $h2-color;
+            }
+            &.active {
+              display: block;
+            }
+          }
+        }
+      }
+      .bookmark-list {
+        background-color: $bg-grey;
+        min-height: 78px;
+        color: $pl-holder;
+
+        .bookmark-item {
+          display: flex;
+          background-color: $bg-white;
+
+          .show-category-name {
+            background-color: $h1-color;
+            padding: 0.375rem 0.75rem;
+            color: $bg-white;
+          }
+        }
+      }
+    }
+  }
+}
+/* End Bookmark Manager */
+
+/* Start Password Generator */
+.pw-manager {
+  background-color: $bg-white;
+  min-height: 100vh;
+  .container {
+    .pw-generation {
+      background-color: $bg-grey;
+      .choice-box {
+        .input-box {
+          .pw-length {
+            width: 180px;
+            background-color: $bg-white;
+          }
+          .pw-error-message {
+            background-color: $bg-white;
+            color: $pl-holder;
+            display: none;
+          }
+        }
+        .option-box {
+          background-color: $bg-white;
+          margin-top: 10px;
+          height: -webkit-fit-content;
+          height: -moz-fit-content;
+          height: fit-content;
+          fieldset {
+            background-color: $bg-white;
+            // input[type="checkbox"]:checked {
+            //   background-color: $h2-color;
+            // }
+            // input[type="checkbox"] {
+            //   background-color: green;
+            // }
+          }
+        }
+      }
+
+      .pw-result {
+        background-color: $bg-white;
+        min-height: 40px;
+        word-wrap: break-wrod;
+        color: $pl-holder;
+      }
+    }
+    .pw-display {
+      background-color: $bg-grey;
+      h4 {
+        color: inherit;
+      }
+      .pw-list {
+        color: inherit;
+        .pw-item {
+          background-color: $bg-white;
+          word-wrap: break-wrod;
+          color: $pl-holder;
+        }
+      }
+    }
+  }
+}
+/* End Password Generator */

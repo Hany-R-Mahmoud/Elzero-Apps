@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elzero Apps</title>
+    <link rel="stylesheet" href="./dist/css/main.css" />
+    <link rel="stylesheet" href="./dist/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="quote-generator">
+      <div
+        class="container d-flex flex-column align-items-center justify-content-center"
+      >
+        <h1 class="text-uppercase">Random Quote Generator</h1>
+        <div class="quotes p-1 rounded-pill">
+          <span class="quote-id mb-n3">0</span>
+        </div>
+        <div
+          class="quote-display p-3 px-5 text-center d-flex flex-column gap-2 justify-content-center align-items-center rounded fst-italic"
+        >
+          Quote will appear here
+
+          <span class="speaker fst-italic fw-bold text-capitalize"></span>
+        </div>
+        <div class="quote-buttons d-flex gap-2 justify-content-center p-2">
+          <div class="generate btn btn-success">Generate</div>
+          <div class="auto btn btn-primary">Auto</div>
+          <div class="stop btn btn-danger">Stop</div>
+        </div>
+      </div>
+    </div>
+    <script src="./dist/js/all.min.js"></script>
+    <script src="./dist/js/index.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

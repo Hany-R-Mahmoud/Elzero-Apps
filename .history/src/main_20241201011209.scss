@@ -1,0 +1,33 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+/* Start Quote Generator */
+.quote-generator {
+  height: 100vh;
+  background-color: #e5eaf5;
+  .container {
+    .quotes {
+      .quote-id {
+      }
+    }
+    .quote-display {
+      background: #fbfcf8;
+      width: 600px;
+      height: 400px;
+      position: relative;
+      &:before {
+        content: "\f10d";
+      }
+      &:after {
+        content: "\f10e";
+      }
+      &::before,
+      &::after {
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+      }
+    }
+    .quote-buttons {
+    }
+  }
+}
+/* End Quote Generator */

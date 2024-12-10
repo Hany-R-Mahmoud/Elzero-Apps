@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elzero Apps</title>
+    <link rel="stylesheet" href="./dist/css/main.css" />
+    <link rel="stylesheet" href="./dist/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Start Quote Generator -->
+    <div class="quote-generator">
+      <div
+        class="container d-flex flex-column align-items-center justify-content-center"
+      >
+        <h1 class="text-uppercase">Random Quote Generator</h1>
+        <div class="quote-id bg-primary text-light p-1 rounded">0</div>
+
+        <div
+          class="quote-display p-3 px-5 text-center d-flex flex-column gap-2 justify-content-center align-items-center rounded fst-italic"
+        >
+          <div class="quote-text fs-2"></div>
+          <div class="quote-speaker fst-italic text-capitalize"></div>
+        </div>
+        <div
+          class="auto-status text-center py-1 px-2 bg-light rounded text-primary"
+        >
+          Auto : Off
+        </div>
+        <div class="quote-buttons d-flex gap-2 justify-content-center p-2">
+          <button class="generate-btn btn btn-success">Generate</button>
+          <button class="auto-btn btn btn-primary">Auto</button>
+          <button class="stop-btn btn btn-danger">Stop</button>
+        </div>
+      </div>
+    </div>
+    <!-- End Quote Generator -->
+    <!-- Start currency Converter -->
+    <div class="currency-converter">
+      <div
+        class="container d-flex flex-column align-items-center justify-content-center"
+      >
+        <h1 class="text-uppercase">Currency Converter</h1>
+        <div
+          class="currency-display p-3 px-5 text-center d-flex flex-column gap-2 justify-content-evenly rounded"
+        >
+          <input
+            class="amount border-0 rounded px-3 py-2"
+            type="number"
+            id="number"
+            placeholder="Amout"
+            onfocus="this.removeAttribute('placeholder')"
+            onblur="this.setAttribute('placeholder', 'Amount')"
+          />
+          <div class="row justify-content-around">
+            <select class="from border-0 rounded" name="from" id="from">
+              <option value="USD" selected>USD</option>
+              <option value="EUR">EUR</option>
+              <option value="KWD">KWD</option>
+              <option value="MVR">MVR</option>
+              <option value="SAR">SAR</option>
+              <option value="QAR">QAR</option>
+              <option value="GBP">GBP</option>
+              <option value="EGP">EGP</option>
+            </select>
+            <select class="to border-0 rounded" name="to" id="to">
+              <option value="EGP" selected>EGP</option>
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="KWD">KWD</option>
+              <option value="MVR">MVR</option>
+              <option value="SAR">SAR</option>
+              <option value="QAR">QAR</option>
+              <option value="GBP">GBP</option>
+            </select>
+          </div>
+          <div
+            class="currency-result bg-light px-3 py-2 border-0 rounded"
+          ></div>
+
+          <button class="convert-btn btn btn-primary rounded">Convert</button>
+        </div>
+      </div>
+    </div>
+    <!-- End Currency Converter -->
+    <!-- Start News -->
+    <div class="news">
+      <div class="container">
+        <h1 class="text-uppercase">Latest News</h1>
+        <div class="display-box">
+          <ul class="news-list row list-unstyled d-flex flex-row">
+            <li class="news-box col-lg-4 col-md-6">
+              <div class="card">
+                <img
+                  src="https://ik.imagekit.io/hrim/1731081786417.jpg?updatedAt=1731087576467"
+                  class="card-img-top"
+                  alt=""
+                />
+                <div class="card-body">
+                  <div class="card-top">
+                    <span class="by fw-bold">By : <span>Hany</span></span>
+                    <span class="date"></span>
+                  </div>
+                  <a href=""></a>
+                  <p class="description"></p>
+
+                  <div class="card-bottom">
+                    <span>Source :</span>
+                    <span class="source fw-bold">Hany</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="news-box col-lg-4 col-md-6">
+              <div class="card">
+                <img src="" class="card-img-top" alt="" />
+                <div class="card-body">
+                  <div class="card-top">
+                    <span class="by">By : <span></span></span>
+                    <span class="date"></span>
+                  </div>
+                  <a href=""></a>
+                  <p class="description"></p>
+
+                  <div class="card-bottom">
+                    <span>Source :</span>
+                    <span class="source"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="news-box col-lg-4 col-md-6">
+              <div class="card">
+                <img src="" class="card-img-top" alt="" />
+                <div class="card-body">
+                  <div class="card-top">
+                    <span class="by">By : <span></span></span>
+                    <span class="date"></span>
+                  </div>
+                  <a href=""></a>
+                  <p class="description"></p>
+
+                  <div class="card-bottom">
+                    <span>Source :</span>
+                    <span class="source"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End News -->
+    <script src="./dist/js/all.min.js"></script>
+    <script src="./dist/js/index.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

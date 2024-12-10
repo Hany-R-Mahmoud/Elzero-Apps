@@ -1,0 +1,182 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "./scss/utilities";
+/* Start Special Heading */
+.special-heading {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 20px;
+  margin: 0 auto 80px;
+  border: 2px solid black;
+  position: relative;
+  z-index: 1;
+  &:hover {
+    color: white;
+    transition-delay: calc(var(--transition-duration) + 0.2s);
+    border: 2px solid white;
+  }
+  &::before,
+  &::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    z-index: -1;
+    transition: calc(var(--transition-duration) + 0.3s);
+  }
+  &::before {
+    left: -30px;
+  }
+  &::after {
+    right: -30px;
+  }
+  &:hover::before {
+    left: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+  &:hover::after {
+    right: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+/* End Special Heading */
+/* Start Quote Generator */
+.quote-generator {
+  background-color: $bg-grey;
+  .container {
+    height: 100vh;
+    h1 {
+      color: $h1-color;
+    }
+    .quote-id {
+      transform: translateY(40px);
+      z-index: 2;
+    }
+    .quote-display {
+      background: $bg-white;
+      width: 500px;
+      height: 350px;
+      position: relative;
+      color: #84495f;
+      &:before {
+        content: "\f10d";
+        bottom: 5rem;
+        left: 2rem;
+      }
+      &:after {
+        content: "\f10e";
+        top: 5rem;
+        right: 2rem;
+      }
+      &::before,
+      &::after {
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+      }
+      .quote-speaker {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+    }
+  }
+}
+/* End Quote Generator */
+/* Start currency Converter */
+.currency-converter {
+  background: $bg-white;
+  .container {
+    height: 100vh;
+    h1 {
+      color: $h1-color;
+    }
+    .currency-display {
+      background: $bg-grey;
+      width: 500px;
+      height: 350px;
+      .amount:focus {
+        outline: none;
+      }
+      select:focus {
+        outline: none;
+      }
+      .from,
+      .to {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+      }
+      .currency-result {
+        min-height: 2rem;
+      }
+      button {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        align-self: center;
+      }
+    }
+  }
+}
+/* End currency Converter */
+/* Start News */
+.news {
+  background-color: $bg-grey;
+  .container {
+    h1 {
+      color: $h1-color;
+    }
+    .news-list {
+      .card {
+        box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.022);
+        transition: 0.5s;
+        opacity: 0.85;
+      }
+      .card:hover {
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+        opacity: 1;
+      }
+      .publish-date {
+        color: #777;
+      }
+    }
+  }
+}
+/* End News */
+/* Start Event Manager */
+.event-manager {
+  background-color: $bg-white;
+  .container {
+    height: 100vh;
+    h1 {
+      color: $h1-color;
+    }
+    .event-display {
+      background-color: $bg-grey;
+      width: 500px;
+      height: 350px;
+      input:focus {
+        outline: none;
+      }
+      .add-btn {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        align-self: center;
+      }
+    }
+  }
+}
+/* End Event Manager */

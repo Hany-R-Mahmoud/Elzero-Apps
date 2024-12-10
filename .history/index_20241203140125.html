@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elzero Apps</title>
+    <link
+      rel="shortcut icon"
+      type="image/icon"
+      href="./dist/assets/images/logo/logo.png"
+    />
+    <link rel="stylesheet" href="./dist/css/main.css" />
+    <link rel="stylesheet" href="./dist/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="navbar-progress"></div>
+      <div class="container gap-3">
+        <a class="navbar-brand" href="#quote">
+          <img src="./dist/assets/images/Logo/logo.png" alt="logo" class="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-icon">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-xmark" style="display: none"></i>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#quote">Quote</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#currency">Currency</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#news">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#event">Events</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <!-- Start Quote Generator -->
+    <div class="quote-generator py-2" id="quote">
+      <div
+        class="container d-flex flex-column align-items-center justify-content-center"
+      >
+        <div
+          class="special-heading px-2 py-1 mx-auto text-uppercase fs-3 fw-bold mb-3"
+        >
+          Quote
+        </div>
+        <div class="quote-id text-light p-1 rounded">0</div>
+
+        <div
+          class="quote-display p-3 px-5 text-center d-flex flex-column gap-2 justify-content-center align-items-center rounded fst-italic"
+        >
+          <div class="quote-text fs-2"></div>
+          <div class="quote-speaker fst-italic text-capitalize"></div>
+        </div>
+        <div
+          class="auto-status text-center py-1 px-2 bg-light rounded text-primary"
+        >
+          Auto : Off
+        </div>
+        <div class="quote-buttons d-flex gap-2 justify-content-center p-2">
+          <button class="generate-btn btn btn-success">Generate</button>
+          <button class="auto-btn btn btn-primary">Auto</button>
+          <button class="stop-btn btn btn-danger">Stop</button>
+        </div>
+      </div>
+    </div>
+    <!-- End Quote Generator -->
+    <!-- Start currency Converter -->
+    <div class="currency-converter" id="currency">
+      <div
+        class="container d-flex flex-column align-items-center justify-content-center"
+      >
+        <div
+          class="special-heading px-2 py-1 mx-auto text-uppercase fs-3 fw-bold mb-3"
+        >
+          Currency Converter
+        </div>
+        <div
+          class="currency-display p-3 px-5 text-center d-flex flex-column gap-2 justify-content-evenly rounded"
+        >
+          <input
+            class="amount border-0 rounded px-3 py-2"
+            type="number"
+            id="number"
+            placeholder="Amout"
+            onfocus="this.removeAttribute('placeholder')"
+            onblur="this.setAttribute('placeholder', 'Amount')"
+          />
+          <div class="row justify-content-around">
+            <select class="from border-0 rounded" name="from" id="from">
+              <option value="USD" selected>USD</option>
+              <option value="EUR">EUR</option>
+              <option value="KWD">KWD</option>
+              <option value="MVR">MVR</option>
+              <option value="SAR">SAR</option>
+              <option value="QAR">QAR</option>
+              <option value="GBP">GBP</option>
+              <option value="EGP">EGP</option>
+            </select>
+            <select class="to border-0 rounded" name="to" id="to">
+              <option value="EGP" selected>EGP</option>
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="KWD">KWD</option>
+              <option value="MVR">MVR</option>
+              <option value="SAR">SAR</option>
+              <option value="QAR">QAR</option>
+              <option value="GBP">GBP</option>
+            </select>
+          </div>
+          <div
+            class="currency-result bg-light px-3 py-2 border-0 rounded"
+          ></div>
+
+          <button class="convert-btn btn btn-success rounded">Convert</button>
+        </div>
+      </div>
+    </div>
+    <!-- End Currency Converter -->
+    <!-- Start News -->
+    <div class="news py-5" id="news">
+      <div class="container text-center">
+        <div
+          class="special-heading px-2 py-1 mx-auto text-uppercase fs-3 fw-bold mb-3"
+        >
+          Latest News
+        </div>
+        <ul class="news-list row p-2 list-unstyled"></ul>
+      </div>
+    </div>
+    <!-- End News -->
+    <!-- Start Event Manager -->
+    <div class="event-manager" id="event">
+      <div
+        class="container d-flex flex-column align-items-center justify-content-center"
+      >
+        <div
+          class="special-heading px-2 py-1 mx-auto text-uppercase fs-3 fw-bold mb-3"
+        >
+          Event Manager
+        </div>
+        <div
+          class="event-display p-3 px-5 text-center d-flex flex-column gap-2 justify-content-evenly rounded"
+        >
+          <input
+            type="text"
+            class="event-name border-0 rounded px-3 py-2"
+            id="event-name"
+            placeholder="Event Name"
+            onfocus="this.removeAttribute('placeholder')"
+            onblur="this.setAttribute('placeholder' , 'Event Name')"
+          />
+          <input
+            type="text"
+            class="event-organizer border-0 rounded px-3 py-2"
+            id="event-organizer"
+            placeholder="Event Organzier"
+            onfocus="this.removeAttribute('placeholder')"
+            onblur="this.setAttribute('placeholder' , 'Event Organizer')"
+          />
+          <input
+            type="date"
+            class="event-date border-0 rounded px-3 py-2"
+            id="event-date"
+          />
+          <button class="add-btn btn btn-danger">Add</button>
+        </div>
+        <div class="event-list"></div>
+      </div>
+    </div>
+    <!-- End Event Manager -->
+    <script src="./dist/js/all.min.js"></script>
+    <script src="./dist/js/index.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

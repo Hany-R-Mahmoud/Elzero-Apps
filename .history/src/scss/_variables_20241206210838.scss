@@ -1,0 +1,10 @@
+html {
+  scroll-padding-top: 66px;
+}
+
+input {
+  color: $h2-color;
+  &::placeholder {
+    color: $pl-holder;
+  }
+}

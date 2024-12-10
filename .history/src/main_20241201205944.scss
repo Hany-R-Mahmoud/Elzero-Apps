@@ -1,0 +1,44 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+/* Start Quote Generator */
+.quote-generator {
+  background-color: #e5eaf5;
+  .container {
+    height: 100vh;
+    h1 {
+      color: #510a23;
+    }
+    .quote-id{
+        transform: translateY(40px);
+        z-index-2
+    }
+    .quote-display {
+      background: #fbfcf8;
+      width: 500px;
+      height: 350px;
+      position: relative;
+      color: #84495f;
+      &:before {
+        content: "\f10d";
+        bottom: 5rem;
+        left: 2rem;
+      }
+      &:after {
+        content: "\f10e";
+        top: 5rem;
+        right: 2rem;
+      }
+      &::before,
+      &::after {
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+      }
+      .quote-speaker {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+    }
+  }
+}
+/* End Quote Generator */

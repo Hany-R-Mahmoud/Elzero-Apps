@@ -1,0 +1,18 @@
+html {
+  scroll-padding-top: 66px;
+}
+input::-webkit-input-placeholder {
+  color: $h2-color;
+}
+input::-moz-placeholder {
+  color: $h2-color;
+}
+input:-ms-input-placeholder {
+  color: $h2-color;
+}
+input::-ms-input-placeholder {
+  color: $h2-color;
+}
+input::placeholder {
+  color: $h2-color;
+}

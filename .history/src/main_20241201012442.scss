@@ -1,0 +1,44 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+/* Start Quote Generator */
+.quote-generator {
+  background-color: #e5eaf5;
+  .container {
+    height: 100vh;
+    h1 {
+      color: #510a23;
+    }
+    .quotes {
+      background-color: #2d99ae;
+      color: white;
+      .quote-id {
+      }
+    }
+    .quote-display {
+      background: #fbfcf8;
+      width: 500px;
+      height: 350px;
+      position: relative;
+      color: #582841;
+      &:before {
+        content: "\f10d";
+        top: 5rem;
+        left: 2rem;
+      }
+      &:after {
+        content: "\f10e";
+        bottom: 5rem;
+        right: 2rem;
+      }
+      &::before,
+      &::after {
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+      }
+    }
+    .quote-buttons {
+    }
+  }
+}
+/* End Quote Generator */

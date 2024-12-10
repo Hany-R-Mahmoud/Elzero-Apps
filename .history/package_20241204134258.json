@@ -1,0 +1,24 @@
+{
+  "name": "project-structure",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:sass": "sass src/main.scss dist/css/main.css",
+    "build:ts": "tsc",
+    "build": "npm run build:sass && npm run build:ts",
+    "watch:sass": "sass --watch src/main.scss:dist/css/main.css",
+    "watch:ts": "tsc --watch",
+    "watch": "npm run watch:ts &&  npm run watch:sass"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@sweetalert2/theme-bulma": "^5.0.18",
+    "bootstrap": "^5.3.3",
+    "sass": "^1.81.0",
+    "sweetalert2": "^11.14.5"
+  }
+}

@@ -1,0 +1,20 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+/* Start Quote Generator */
+.quote-generator {
+  background-color: #e5eaf5;
+  .container {
+    .quotes {
+      .quote-id {
+      }
+    }
+    .quote-display {
+      background: #fbfcf8;
+      width: 600px;
+      height: 400px;
+    }
+    .quote-buttons {
+    }
+  }
+}
+/* End Quote Generator */

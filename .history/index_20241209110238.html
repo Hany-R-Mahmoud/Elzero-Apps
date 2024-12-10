@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elzero Apps</title>
+    <link
+      rel="shortcut icon"
+      type="image/icon"
+      href="./dist/assets/images/logo/logo.png"
+    />
+    <link rel="stylesheet" href="./dist/css/main.css" />
+    <link rel="stylesheet" href="./dist/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="navbar-progress"></div>
+      <div class="container gap-3">
+        <a class="navbar-brand" href="#quote">
+          <img src="./dist/assets/images/Logo/logo.png" alt="logo" class="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-icon">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-xmark" style="display: none"></i>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#quote">Quote</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#currency">Currency</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#news">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#event">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#bookmark">Bookmarks</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#passwrod-manager">Password</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Start Quote Generator -->
+    <div class="quote-generator py-5" id="quote">
+      <div
+        class="special-heading px-2 py-1 mx-auto text-uppercase fs-3 fw-bold mb-3"
+      >
+        Quote
+      </div>
+      <div
+        class="container d-flex flex-column align-items-center justify-content-center"
+      >
+        <div class="quote-id text-light rounded d-none">0</div>
+
+        <div
+          class="quote-display col-lg-6 col-lg-8 p-3 px-5 text-center d-flex flex-column gap-2 justify-content-center align-items-center rounded fst-italic"
+        >
+          <div class="quote-text fs-2"></div>
+          <div class="quote-speaker fst-italic text-capitalize"></div>
+        </div>
+        <div
+          class="auto-status text-center py-1 px-2 bg-light rounded text-primary"
+        >
+          Auto : Off
+        </div>
+        <div class="quote-buttons d-flex gap-2 justify-content-center p-2">
+          <button class="generate-btn btn btn-success">Generate</button>
+          <button class="auto-btn btn btn-primary">Auto</button>
+          <button class="stop-btn btn btn-danger">Stop</button>
+        </div>
+      </div>
+    </div>
+    <!-- End Quote Generator -->
+
+    <!-- Start currency Converter -->
+    <div class="currency-converter py-5" id="currency">
+      <div
+        class="special-heading px-2 py-1 mx-auto text-uppercase fs-3 fw-bold mb-3"
+      >
+        Currency Converter
+      </div>
+      <div class="container d-flex align-items-center justify-content-center">
+        <div
+          class="currency-display col-lg-6 col-md-8 p-3 px-5 text-center d-flex flex-column gap-2 justify-content-evenly rounded"
+        >
+          <input
+            class="amount border-0 rounded px-3 py-2"
+            type="number"
+            id="number"
+            placeholder="Amount"
+            onfocus="this.removeAttribute('placeholder')"
+            onblur="this.setAttribute('placeholder', 'Amount')"
+          />
+          <div class="row justify-content-around">
+            <select class="from border-0 rounded" name="from" id="from">
+              <option value="USD" selected>USD</option>
+              <option value="EUR">EUR</option>
+              <option value="KWD">KWD</option>
+              <option value="MVR">MVR</option>
+              <option value="SAR">SAR</option>
+              <option value="QAR">QAR</option>
+              <option value="GBP">GBP</option>
+              <option value="EGP">EGP</option>
+            </select>
+            <select class="to border-0 rounded" name="to" id="to">
+              <option value="EGP" selected>EGP</option>
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="KWD">KWD</option>
+              <option value="MVR">MVR</option>
+              <option value="SAR">SAR</option>
+              <option value="QAR">QAR</option>
+              <option value="GBP">GBP</option>
+            </select>
+          </div>
+          <div
+            class="currency-result bg-light px-3 py-2 border-0 rounded"
+          ></div>
+
+          <button class="convert-btn btn btn-success rounded">Convert</button>
+        </div>
+      </div>
+    </div>
+    <!-- End Currency Converter -->
+
+    <!-- Start News -->
+    <div class="news py-5" id="news">
+      <div
+        class="special-heading px-2 py-1 mx-auto text-uppercase fs-3 fw-bold mb-3"
+      >
+        Latest News
+      </div>
+      <div class="container text-center">
+        <ul class="news-list row p-2 list-unstyled"></ul>
+      </div>
+    </div>
+    <!-- End News -->
+
+    <!-- Start Event Manager -->
+    <div class="event-manager py-5" id="event">
+      <div
+        class="special-heading px-2 py-1 mx-auto text-uppercase fs-3 fw-bold mb-3"
+      >
+        Event Manager
+      </div>
+      <div class="container text-center d-flex flex-column">
+        <div
+          class="event-display col-lg-6 col-md-8 p-3 px-5 text-center d-flex flex-column gap-2 justify-content-evenly rounded mb-2"
+        >
+          <input
+            type="text"
+            class="event-name border-0 rounded px-3 py-2 text-capitalize"
+            id="event-name"
+            placeholder="Event Name"
+            onfocus="this.removeAttribute('placeholder')"
+            onblur="this.setAttribute('placeholder' , 'Event Name')"
+          />
+          <input
+            type="text"
+            class="event-organizer border-0 rounded px-3 py-2 text-capitalize"
+            id="event-organizer"
+            placeholder="Event Organzier"
+            onfocus="this.removeAttribute('placeholder')"
+            onblur="this.setAttribute('placeholder' , 'Event Organizer')"
+          />
+          <input
+            type="date"
+            class="event-date border-0 rounded px-3 py-2"
+            id="event-date"
+          />
+          <button class="add-btn btn btn-success">Add</button>
+        </div>
+        <ul class="events-list row list-unstyled justify-content-center"></ul>
+      </div>
+    </div>
+    <!-- End Event Manager -->
+
+    <!-- Start Bookmark Manager -->
+    <div class="bookmark-manager py-5" id="bookmark">
+      <div
+        class="special-heading px-2 py-1 mx-auto text-uppercase fs-3 fw-bold mb-3"
+      >
+        Bookmark Manager
+      </div>
+      <div class="container text-center">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-8">
+            <div
+              class="bookmark-display p-3 px-5 text-center d-flex flex-column gap-2 justify-content-evenly rounded mb-2"
+            >
+              <h4>Add New Bookmark</h4>
+              <input
+                type="text"
+                class="bookmark-title border-0 rounded px-3 py-2"
+                id="bookmark-title"
+                placeholder="Bookmark Title"
+                onfocus="this.removeAttribute('placeholder')"
+                onblur="this.setAttribute('placeholder' , 'Bookmark Title')"
+              />
+              <input
+                type="text"
+                class="bookmark-url border-0 rounded px-3 py-2"
+                id="bookmark-url"
+                placeholder="Bookmark Url"
+                onfocus="this.removeAttribute('placeholder')"
+                onblur="this.setAttribute('placeholder' , 'Bookmark Url')"
+              />
+              <h6>Add / Choose Category</h6>
+              <input
+                type="text"
+                class="bookmark-category border-0 rounded px-3 py-2"
+                id="bookmark-category"
+                placeholder="Add Bookmark Category"
+                onfocus="this.removeAttribute('placeholder')"
+                onblur="this.setAttribute('placeholder' , 'Add Bookmark Category')"
+              />
+              <ul
+                class="choose-category border-0 rounded px-3 py-2 list-unstyled d-flex flex-wrap gap-1 justify-content-center align-items-center"
+              ></ul>
+              <button class="add-btn btn btn-primary" onclick="addBookmark()">
+                Add
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-8">
+            <div
+              class="show-bookmark p-3 px-5 text-center d-flex flex-column gap-2 justify-content-evenly rounded"
+            >
+              <h4>Show Bookmarks</h4>
+              <div class="filter-category px-3 py-2 rounded">
+                <h6>Filter Categories</h6>
+                <div class="filter-box">
+                  <span class="all-chosen-category-tab btn rounded">
+                    Show All
+                  </span>
+                  <ul
+                    class="category-tabs border-0 rounded px-3 py-2 list-unstyled d-flex flex-wrap gap-1 justify-content-center align-items-center"
+                  ></ul>
+                </div>
+              </div>
+              <ul
+                class="bookmark-list row list-unstyled px-3 py-2 rounded justify-content-center align-items-center"
+              ></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Bookmark Manager -->
+
+    <!-- Start Password Generator -->
+    <div class="pw-manager py-5" id="passwrod-manager">
+      <div
+        class="special-heading px-2 py-1 mx-auto text-uppercase fs-3 fw-bold mb-3"
+      >
+        Password Generator
+      </div>
+      <div class="container text-center">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-8">
+            <div
+              class="pw-generation p-3 px-5 text-center d-flex flex-column gap-2 justify-content-evenly rounded mb-2"
+            >
+              <div
+                class="choice-box d-flex flex-wrap gap-1 justify-content-between align-items-center"
+              >
+                <div class="input-box d-flex flex-column text-start">
+                  <label for="pw-length" class="px-3">Password Length</label>
+                  <input
+                    type="number"
+                    min="8"
+                    max="32"
+                    id="pw-length"
+                    class="pw-length border-0 rounded px-3 py-2"
+                    placeholder="8 - 32 characters"
+                    onfocus="this.removeAttribute('placeholder')"
+                    onblur="this.setAttribute('placeholder' , '8 - 32 characters')"
+                  />
+                  <span
+                    class="pw-error-message border-0 rounded px-2 py-1 mt-1"
+                  >
+                  </span>
+                </div>
+                <div
+                  class="option-box d-flex flex-column text-start rounded px-3 py-2"
+                >
+                  <fieldset class="d-flex justify-content-between gap-3">
+                    <label for="opt-number">Numbers</label>
+                    <input type="checkbox" id="opt-number" />
+                  </fieldset>
+                  <fieldset class="d-flex justify-content-between gap-3">
+                    <label for="opt-sp-character">Special Ch.</label>
+                    <input type="checkbox" id="opt-sp-character" />
+                  </fieldset>
+                </div>
+              </div>
+              <button class="pw-generate-btn btn btn-danger">
+                Generate Password
+              </button>
+              <div class="pw-result border-0 rounded px-3 py-2"></div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-8">
+            <div
+              class="pw-display p-3 px-5 text-center d-flex flex-column gap-2 justify-content-evenly rounded"
+            >
+              <h4>Last 10 Generated Passwords</h4>
+              <ul
+                class="pw-list list-unstyled d-flex flex-column justify-content-around"
+              >
+                <li class="pw-item px-3 py-2 text-center rounded">dd</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Password Generator -->
+    <script src="./dist/js/all.min.js"></script>
+    <script src="./dist/js/index.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

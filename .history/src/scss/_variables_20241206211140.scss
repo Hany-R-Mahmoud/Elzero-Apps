@@ -1,0 +1,16 @@
+html {
+  scroll-padding-top: 66px;
+}
+
+input {
+  color: $h2-color;
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: $pl-holder;
+  }
+}
+select:focus {
+  outline: none;
+}
