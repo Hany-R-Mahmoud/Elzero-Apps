@@ -12156,6 +12156,7 @@ select:focus {
 /* Start Quote Generator */
 .quote-generator {
   background-color: #e5eaf5;
+  min-height: 100vh;
 }
 .quote-generator .container .quote-id {
   transform: translateY(40px);
@@ -12193,6 +12194,7 @@ select:focus {
 /* Start currency Converter */
 .currency-converter {
   background: #fbfcf8;
+  min-height: 100vh;
 }
 .currency-converter .container .currency-display {
   background: #e5eaf5;
@@ -12225,6 +12227,7 @@ select:focus {
 /* Start News */
 .news {
   background-color: #e5eaf5;
+  min-height: 100vh;
 }
 .news .container .news-list .card {
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.022);
@@ -12305,6 +12308,7 @@ select:focus {
 /* Start Bookmark Manager */
 .bookmark-manager {
   background-color: #e5eaf5;
+  min-height: 100vh;
 }
 .bookmark-manager .container .bookmark-display {
   background-color: #fbfcf8;
@@ -12386,6 +12390,7 @@ select:focus {
 /* Start Password Generator */
 .pw-manager {
   background-color: #fbfcf8;
+  min-height: 100vh;
 }
 .pw-manager .container .pw-generation {
   background-color: #e5eaf5;
