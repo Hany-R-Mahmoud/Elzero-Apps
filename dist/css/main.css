@@ -12258,6 +12258,7 @@ select:focus {
 /* Start Event Manager */
 .event-manager {
   background-color: #fbfcf8;
+  min-height: 100vh;
 }
 .event-manager .container .event-display {
   background-color: #e5eaf5;
