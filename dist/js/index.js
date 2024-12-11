@@ -128,7 +128,7 @@ async function currencyConvert() {
     }
 }
 convertBtn.addEventListener("click", currencyConvert);
-const newsCount = 12;
+const newsCount = 6;
 const apiKey = "2ab4a103569327a8273c87936585c129";
 const url = `https://gnews.io/api/v4/search?q=arab&lang=en&country=any&max=${newsCount}&apikey=${apiKey}`;
 async function fetchNewsData() {
@@ -166,24 +166,17 @@ async function displayNews() {
                     ${article.description}
                   </p>
                 <div class="card-footer px-1 d-flex flex-column justify-content-between ">
-                    <span class="author fw-bold"
-                      >By <span class="fw-normal fst-italic">${article.source.name}</span></span
-                    >
-                      <span class="publish-date">${new Date(article.publishedAt)
-                .toISOString()
-                .split("T")[0]}</span>
-                  <div class="card-bottom d-flex justify-content-start
-                 gap-3">
-                    <span class="fw-bold">Website</span>
-                    <span class="source fst-italic">
-                    <a
+                    <span class="fw-normal fst-italic"> 
+                      <a
                     class="website"
                     href="${article.source.url}"
                     target="_blank"
-                    >${article.source.url}</a
+                    > ${article.source.name}</a
                   >
-                    </span>
-                  </div>
+                     </span>
+                      <span class="publish-date">${new Date(article.publishedAt)
+                .toISOString()
+                .split("T")[0]}</span>
                 </div>
                 </div>
               </div>`;

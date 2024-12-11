@@ -29,7 +29,7 @@
     position: fixed;
     height: 66px;
     width: 0;
-    background-color: #08c99a;
+    background-color: #3e7279;
     z-index: -1;
     transition: 0.1s;
   }
@@ -297,15 +297,14 @@
       .publish-date {
         color: #777;
       }
-      .website {
-        text-decoration: none;
+      .source {
+        white-space: wrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        .website {
+          text-decoration: none;
+        }
       }
-      // .source {
-      //   white-space: wrap;
-      //   text-overflow: ellipsis;
-      //   overflow: hidden;
-
-      // }
     }
   }
 }

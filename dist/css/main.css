@@ -11970,7 +11970,7 @@ html {
 }
 
 input {
-  color: #e84a5f;
+  color: #f04770;
 }
 input:focus {
   outline: none;
@@ -11995,16 +11995,16 @@ select:focus {
 }
 
 .swal2-confirm {
-  background-color: #5e9299;
+  background-color: #06d7a0;
 }
 
 .swal2-html-container {
-  color: #e84a5f;
+  color: #f04770;
 }
 
 .swal2-icon {
-  color: #5e9299;
-  background-color: #5e9299;
+  color: #06d7a0;
+  background-color: #06d7a0;
 }
 .swal2-icon .swal2-icon-content {
   color: #fbfcf8;
@@ -12013,14 +12013,14 @@ select:focus {
 /* End SweetAlert  */
 /* Start Navbar */
 .navbar {
-  background-color: #5e9299;
+  background-color: #06d7a0;
   opacity: 0.7;
 }
 .navbar .navbar-progress {
   position: fixed;
   height: 66px;
   width: 0;
-  background-color: #3e7279;
+  background-color: #08c99a;
   z-index: -1;
   transition: 0.1s;
 }
@@ -12053,10 +12053,10 @@ select:focus {
   transition: 0.5s;
 }
 .navbar .container .navbar-toggler:hover {
-  border-color: #e84a5f;
+  border-color: #f04770;
 }
 .navbar .container .navbar-toggler:hover svg {
-  color: #e84a5f;
+  color: #f04770;
 }
 .navbar .container .navbar-toggler:focus {
   box-shadow: none;
@@ -12072,7 +12072,7 @@ select:focus {
   border-radius: 0.25rem;
 }
 .navbar .container .navbar-nav li a.active, .navbar .container .navbar-nav li a:focus, .navbar .container .navbar-nav li a:hover {
-  color: #e84a5f;
+  color: #f04770;
 }
 
 /* End Navbar */
@@ -12084,7 +12084,7 @@ select:focus {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background-color: #5e9299;
+  background-color: #06d7a0;
   color: #fbfcf8;
   cursor: pointer;
   display: flex;
@@ -12111,8 +12111,8 @@ select:focus {
 .special-heading {
   width: -moz-fit-content;
   width: fit-content;
-  color: #e84a5f;
-  border: 2px solid #5e9299;
+  color: #f04770;
+  border: 2px solid #06d7a0;
   position: relative;
   z-index: 1;
 }
@@ -12126,7 +12126,7 @@ select:focus {
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
-  background-color: #5e9299;
+  background-color: #06d7a0;
   position: absolute;
   top: 50%;
   transform: translatey(-50%);
@@ -12156,12 +12156,11 @@ select:focus {
 /* Start Quote Generator */
 .quote-generator {
   background-color: #e5eaf5;
-  min-height: 100vh;
 }
 .quote-generator .container .quote-id {
   transform: translateY(40px);
   z-index: 2;
-  background-color: #e84a5f;
+  background-color: #f04770;
   padding: 0.375rem 0.75rem;
 }
 .quote-generator .container .quote-display {
@@ -12169,7 +12168,7 @@ select:focus {
   min-width: 350px;
   height: 350px;
   position: relative;
-  color: #e84a5f;
+  color: #f04770;
 }
 .quote-generator .container .quote-display:before {
   content: "\f10d";
@@ -12194,7 +12193,6 @@ select:focus {
 /* Start currency Converter */
 .currency-converter {
   background: #fbfcf8;
-  min-height: 100vh;
 }
 .currency-converter .container .currency-display {
   background: #e5eaf5;
@@ -12206,7 +12204,7 @@ select:focus {
   background-color: #fbfcf8;
 }
 .currency-converter .container .currency-display .currency-result {
-  color: #e84a5f;
+  color: #f04770;
 }
 .currency-converter .container .currency-display .from,
 .currency-converter .container .currency-display .to {
@@ -12227,7 +12225,6 @@ select:focus {
 /* Start News */
 .news {
   background-color: #e5eaf5;
-  min-height: 100vh;
 }
 .news .container .news-list .card {
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.022);
@@ -12250,12 +12247,7 @@ select:focus {
 .news .container .news-list .publish-date {
   color: #777;
 }
-.news .container .news-list .source {
-  white-space: wrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.news .container .news-list .source .website {
+.news .container .news-list .website {
   text-decoration: none;
 }
 
@@ -12263,7 +12255,6 @@ select:focus {
 /* Start Event Manager */
 .event-manager {
   background-color: #fbfcf8;
-  min-height: 100vh;
 }
 .event-manager .container .event-display {
   background-color: #e5eaf5;
@@ -12280,7 +12271,7 @@ select:focus {
 }
 .event-manager .container .events-list .event-box {
   color: #fbfcf8;
-  background-color: #5e9299;
+  background-color: #06d7a0;
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.022);
   transition: 0.5s;
   opacity: 0.85;
@@ -12314,7 +12305,6 @@ select:focus {
 /* Start Bookmark Manager */
 .bookmark-manager {
   background-color: #e5eaf5;
-  min-height: 100vh;
 }
 .bookmark-manager .container .bookmark-display {
   background-color: #fbfcf8;
@@ -12330,12 +12320,12 @@ select:focus {
   min-height: 54px;
 }
 .bookmark-manager .container .bookmark-display .choose-category .chosen-category-name {
-  background-color: #5e9299;
+  background-color: #06d7a0;
   color: #fbfcf8;
   transition: 0.5s;
 }
 .bookmark-manager .container .bookmark-display .choose-category .chosen-category-name:hover {
-  background-color: #e84a5f;
+  background-color: #f04770;
 }
 .bookmark-manager .container .bookmark-display .add-btn {
   width: -moz-fit-content;
@@ -12352,13 +12342,13 @@ select:focus {
   background-color: #e5eaf5;
 }
 .bookmark-manager .container .show-bookmark .filter-category .all-chosen-category-tab {
-  background-color: #5e9299;
+  background-color: #06d7a0;
   color: #fbfcf8;
   margin-bottom: 0.375rem;
   transition: 0.5s;
 }
 .bookmark-manager .container .show-bookmark .filter-category .all-chosen-category-tab:hover {
-  background-color: #e84a5f;
+  background-color: #f04770;
 }
 .bookmark-manager .container .show-bookmark .filter-category .category-tabs {
   background-color: #fbfcf8;
@@ -12367,12 +12357,12 @@ select:focus {
 }
 .bookmark-manager .container .show-bookmark .filter-category .category-tabs .chosen-category-tab {
   display: none;
-  background-color: #5e9299;
+  background-color: #06d7a0;
   color: #fbfcf8;
   transition: 0.5s;
 }
 .bookmark-manager .container .show-bookmark .filter-category .category-tabs .chosen-category-tab:hover {
-  background-color: #e84a5f;
+  background-color: #f04770;
 }
 .bookmark-manager .container .show-bookmark .filter-category .category-tabs .chosen-category-tab.active {
   display: block;
@@ -12387,7 +12377,7 @@ select:focus {
   background-color: #fbfcf8;
 }
 .bookmark-manager .container .show-bookmark .bookmark-list .bookmark-item .show-category-name {
-  background-color: #5e9299;
+  background-color: #06d7a0;
   padding: 0.375rem 0.75rem;
   color: #fbfcf8;
 }
@@ -12396,7 +12386,6 @@ select:focus {
 /* Start Password Generator */
 .pw-manager {
   background-color: #fbfcf8;
-  min-height: 100vh;
 }
 .pw-manager .container .pw-generation {
   background-color: #e5eaf5;
@@ -12407,7 +12396,7 @@ select:focus {
 }
 .pw-manager .container .pw-generation .choice-box .input-box .pw-error-message {
   background-color: #fbfcf8;
-  color: #e84a5f;
+  color: #f04770;
   display: none;
 }
 .pw-manager .container .pw-generation .choice-box .option-box {
@@ -12422,7 +12411,7 @@ select:focus {
   background-color: #fbfcf8;
 }
 .pw-manager .container .pw-generation .choice-box .option-box fieldset input[type=checkbox]:checked {
-  accent-color: #e84a5f;
+  accent-color: #f04770;
   border: none;
 }
 .pw-manager .container .pw-generation .pw-result {
@@ -12440,13 +12429,13 @@ select:focus {
 .pw-manager .container .pw-display h4 select option, .pw-manager .container .pw-display .h4 select option {
   text-align: center;
   background-color: #fbfcf8;
-  color: #e84a5f;
+  color: #f04770;
 }
 .pw-manager .container .pw-display h4 select option::-moz-placeholder, .pw-manager .container .pw-display .h4 select option::-moz-placeholder {
-  color: #e84a5f;
+  color: #f04770;
 }
 .pw-manager .container .pw-display h4 select option::placeholder, .pw-manager .container .pw-display .h4 select option::placeholder {
-  color: #e84a5f;
+  color: #f04770;
 }
 .pw-manager .container .pw-display .pw-list {
   color: inherit;

@@ -195,19 +195,28 @@ async function displayNews() {
                     ${article.description}
                   </p>
                 <div class="card-footer px-1 d-flex flex-column justify-content-between ">
-                    <span class="fw-normal fst-italic"> 
-                      <a
-                    class="website"
-                    href="${article.source.url}"
-                    target="_blank"
-                    > ${article.source.name}</a
-                  >
-                     </span>
+                    <span class="author fw-bold"
+                      >By <span class="fw-normal fst-italic">${
+                        article.source.name
+                      }</span></span
+                    >
                       <span class="publish-date">${
                         new Date(article.publishedAt)
                           .toISOString()
                           .split("T")[0]
                       }</span>
+                  <div class="card-bottom d-flex justify-content-start
+                 gap-3">
+                    <span class="fw-bold">Website</span>
+                    <span class="source fst-italic">
+                    <a
+                    class="website"
+                    href="${article.source.url}"
+                    target="_blank"
+                    >${article.source.url}</a
+                  >
+                    </span>
+                  </div>
                 </div>
                 </div>
               </div>`;
