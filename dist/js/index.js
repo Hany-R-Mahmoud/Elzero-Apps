@@ -19,6 +19,8 @@ navbarItems.forEach((item) => {
         document.querySelector(".navbar-collapse").classList.remove("show");
         document.querySelector(".fa-bars").style.display = "block";
         document.querySelector(".fa-xmark").style.display = "none";
+        navbarLogo.style.animation = "none 0s";
+        navbarLogo.style.setProperty("--translate-y", "0");
     });
 });
 document.querySelectorAll(".navbar .nav-link").forEach((item) => {
