@@ -20,7 +20,7 @@ const navbarItems = <NodeListOf<HTMLLIElement>>(
 );
 navbarItems.forEach((item) => {
   item.addEventListener("click", () => {
-    navbarToggleBtn.classList.add("collapsed");
+    navbarToggleBtn.clas;
   });
 });
 // Navbar active items

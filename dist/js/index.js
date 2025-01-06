@@ -14,7 +14,7 @@ navbarToggleBtn.addEventListener("click", function () {
 const navbarItems = (document.querySelectorAll(".nav-item a"));
 navbarItems.forEach((item) => {
     item.addEventListener("click", () => {
-        navbarToggleBtn.setAttribute("aria-expanded", "false");
+        navbarToggleBtn.classList.add("collapsed");
     });
 });
 document.querySelectorAll(".navbar .nav-link").forEach((item) => {
