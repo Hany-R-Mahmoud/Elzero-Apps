@@ -22,7 +22,7 @@ navbarItems.forEach((item) => {
   item.addEventListener("click", () => {
     navbarToggleBtn.setAttribute("aria-expanded", "false");
     navbarToggleBtn.classList.add("collapsed");
-    document.querySelector(".navbar-collapse").classList.remove("show");
+    document.querySelector(".nsvbar ");
   });
 });
 // Navbar active items
