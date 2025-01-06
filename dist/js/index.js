@@ -17,6 +17,8 @@ navbarItems.forEach((item) => {
         navbarToggleBtn.setAttribute("aria-expanded", "false");
         navbarToggleBtn.classList.add("collapsed");
         document.querySelector(".navbar-collapse").classList.remove("show");
+        document.querySelector(".fa-bars").style.display = "block";
+        document.querySelector(".fa-xmark").style.display = "none";
     });
 });
 document.querySelectorAll(".navbar .nav-link").forEach((item) => {
