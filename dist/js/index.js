@@ -11,6 +11,12 @@ navbarToggleBtn.addEventListener("click", function () {
         document.querySelector(".fa-xmark").style.display = "none";
     }
 });
+const navbarItems = (document.querySelectorAll(".nav-item a"));
+navbarItems.forEach((item) => {
+    item.addEventListener("click", () => {
+        navbarToggleBtn.setAttribute("aria-expanded", "false");
+    });
+});
 document.querySelectorAll(".navbar .nav-link").forEach((item) => {
     item.addEventListener("click", (e) => {
         document.querySelectorAll(".navbar .nav-link").forEach((item) => {

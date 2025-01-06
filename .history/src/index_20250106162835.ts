@@ -15,14 +15,8 @@ navbarToggleBtn.addEventListener("click", function () {
   }
 });
 
-const navbarItems = <NodeListOf<HTMLLIElement>>(
-  document.querySelectorAll(".nav-item a")
-);
-navbarItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    navbarToggleBtn.setAttribute("aria-expanded", "false");
-  });
-});
+const navbarItems = <NodeListOf<HTMLLIElement>>document.querySelectorAll();
+
 // Navbar active items
 document.querySelectorAll(".navbar .nav-link").forEach((item) => {
   item.addEventListener("click", (e: any) => {
